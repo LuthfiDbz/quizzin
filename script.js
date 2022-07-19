@@ -119,7 +119,6 @@ const checkAnswer = (data) => {
     index++
     if(index > 9) {
       index = 0
-      score = 0
       header.removeClass('headerQuiz').addClass('headerHome')
       $('#header h3').remove()
       $('#header h5').remove()
@@ -131,6 +130,7 @@ const checkAnswer = (data) => {
 
       // Event back to home page
       btnStart.unbind().text('Restart Quiz').css('display', 'block').click(()=>{
+        score = 0
         getDataCategories()
       })
       
@@ -212,7 +212,6 @@ const renderQuizPage = (data) => {
   })
   
 }
-      
 // ! getDataQuiz
 const getDataQuiz = (category,level) => {
   // change header
@@ -239,8 +238,8 @@ const getDataQuiz = (category,level) => {
       console.log(data);
 
       // Confirmation screen
+      let a = 6
       const confirmPage = () => {
-        a = 5
         timer = setInterval(() => {
           a--
           quizContent.html(`
@@ -256,7 +255,7 @@ const getDataQuiz = (category,level) => {
 
       // renderQuiz(data)
       setTimeout(() => {
-        if(a == 0) {
+        if(a <= 0) {
           clearInterval(timer)
           // show category and level to header
           $('.title').after(`<h5>${category} <br> Level: ${level}</h5>`)
@@ -311,7 +310,7 @@ const getDataCategories = () => {
         $('#categories').append(`<option value="${i}" id="option">${i}</option>`)
       })
 
-      
+      btnStart.text('Start Quiz').css('display','block')
     },
     error: (error) => {
     // if error -> append status error
@@ -320,7 +319,7 @@ const getDataCategories = () => {
     }
   })
   // btnStart onclick
-  btnStart.unbind().text('Start Quiz').click(() => {
+  btnStart.unbind().css('display','none').click(() => {
     // Get category and level choosen value
     const category =  $('#categories').val();
     const level = $('#level').val()
