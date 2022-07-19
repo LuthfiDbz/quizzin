@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Quizzy</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="quiz">
+      <div class="headerHome" id="header">
+        <h1 class="title">Quizzin</h1>
+        <!-- <h3 class="timer">Time left:  <span>15s</span></h3> -->
+      </div>
+
+      <hr>
+
+      <div class="quizContent">
+        <!-- ! Timer Page -->
+        <!-- <div class="countdownPage">
+          <h2>Quiz will start in</h2>
+          <h1 class="false">5</h1>
+        </div> -->
+
+        <!-- ! Score Page -->
+        <!-- <div class="scorePage">
+          <h1 class="resultText">Nice!</h1>
+          <h2>Your Score</h2>
+          <h1 class="score min">70</h1>
+        </div> -->
+      </div>
+      <h1 class="loading">Now loading...</h1>
+
+      <div class="footer">
+        <p class="amount"></p>
+        <button class="btnNav" id="btnStart"></button>
+        <h2 class="answer"></h2>
+        <button class="btnNav" id="btnNext">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
