@@ -255,12 +255,10 @@ const getDataQuiz = (category,level) => {
 
       // renderQuiz(data)
       setTimeout(() => {
-        if(a <= 0) {
-          clearInterval(timer)
-          // show category and level to header
-          $('.title').after(`<h5>${category} <br> Level: ${level}</h5>`)
-          renderQuizPage(data);
-        }
+        clearInterval(timer)
+        // show category and level to header
+        $('.title').after(`<h5>${category} <br> Level: ${level}</h5>`)
+        renderQuizPage(data);
       },6000)
       
 
