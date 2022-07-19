@@ -10,7 +10,7 @@ const btnNext = $('#btnNext')
 const loader =$('.loading')
 
 let score = 0
-let index = 9
+let index = 0
 let choosenAnswer = null
 let choosenLabel = null
 let correctAnswer = null
