@@ -119,6 +119,7 @@ const checkAnswer = (data) => {
     index++
     if(index > 9) {
       index = 0
+      score = 0
       header.removeClass('headerQuiz').addClass('headerHome')
       $('#header h3').remove()
       $('#header h5').remove()
