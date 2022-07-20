@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background-color: blue;
+  background-image: url('pattern.png');
   box-sizing: border-box;
   height: 100vh;
   padding-top: 20vh;
@@ -17,10 +17,13 @@ body {
 
 .quiz {
   margin: auto;
-  background-color: white;
+  background-color: rgb(235, 242, 253);
   width: 85%;
   padding: 20px 15px 20px;
   border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.64);
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.64);
+  -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.64);
 }
 
 /* HomePage */
